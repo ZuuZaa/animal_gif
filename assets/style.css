@@ -1,0 +1,26 @@
+body {
+        background: url("./background.jpg") no-repeat left top fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+#searchInput {
+    float: left;
+    width: 50%;
+    margin-left: 30%;
+}
+h1 {
+    color: rgb(69, 196, 200);
+    font-weight: bold;
+    padding-left: 8%;
+    padding-top: 1%;
+}
+#btn-holder {
+    padding-top: 27%;
+}
+.my-btn {
+    padding: 1% 6%;
+    margin: 1%;
+    font-size: 1.2em;
+}
