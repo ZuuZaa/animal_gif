@@ -1,16 +1,3 @@
-var apiKey = "c4UCMdKemf33qzUJMnURnI50YjHBmCRT"
-var url = "https://api.giphy.com/v1/gifs/search?api_key=c4UCMdKemf33qzUJMnURnI50YjHBmCRT&q=&limit=25&offset=0&rating=G&lang=en"
-
-$.ajax( {
-    url,
-    data: {
-        q: $("my-btn").text(),
-        api_key: apiKey
-    }
-    }).done(function (response){
-          console.log(response)
-    })
-    
 var animals = ["cat", "dog", "penquin", "rabbit", "goldenfish", "bird", "turtle", "horse", "pig", "monkey"]
 
 for (i in animals){
@@ -18,3 +5,16 @@ for (i in animals){
     gifbtn.text(animals[i])
     $("#btn-holder").append(gifbtn)
 }
+$(".my-btn").on("click", function() {
+    $.ajax( {
+        url: "https://api.giphy.com/v1/gifs/search" ,
+        data: {
+            q: $(this).text(),
+            api_key: "c4UCMdKemf33qzUJMnURnI50YjHBmCRT",
+            limit: 6
+        }
+        }).done(function (response){
+              console.log(response)
+        })
+})
+

@@ -11,7 +11,7 @@ body {
     margin-left: 30%;
 }
 h1 {
-    color: rgb(69, 196, 200);
+    color: rgb(86, 210, 214);
     font-weight: bold;
     padding-left: 8%;
     padding-top: 1%;
@@ -23,4 +23,6 @@ h1 {
     padding: 1% 6%;
     margin: 1%;
     font-size: 1.2em;
+    border-radius: 8px;
+  
 }
