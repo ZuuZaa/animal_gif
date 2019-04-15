@@ -24,5 +24,8 @@ h1 {
     margin: 1%;
     font-size: 1.2em;
     border-radius: 8px;
-  
+}
+img {
+    width: 30%;
+    height: 30%;
 }

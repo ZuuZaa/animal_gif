@@ -1,4 +1,4 @@
-var animals = ["cat", "dog", "penquin", "rabbit", "goldenfish", "bird", "turtle", "horse", "pig", "monkey"]
+var animals = ["cat", "dog", "penquin", "rabbit","frog", "snake", "bird", "turtle", "horse", "pig", "monkey"]
 
 for (i in animals){
     gifbtn = $("<button>").addClass("btn btn-info my-btn")
@@ -11,10 +11,20 @@ $(".my-btn").on("click", function() {
         data: {
             q: $(this).text(),
             api_key: "c4UCMdKemf33qzUJMnURnI50YjHBmCRT",
-            limit: 6
+            limit: 9
         }
         }).done(function (response){
-              console.log(response)
+            $("#gif-holder").empty()
+              for (i=0; i<9; i++) {
+                  var gifimg = $("<img>")
+                  gifimg.addClass("mx-auto p-2")
+                  gifimg.attr("data-move", response.data[i].images.fixed_height.url)
+                  gifimg.attr("data-still", response.data[i].images.fixed_height_still.url)
+                  gifimg.attr("data-condition", "still")
+                  gifimg.attr("src", response.data[i].images.fixed_height_still.url)
+                  $("#gif-holder").append(gifimg)
+              }
+
         })
 })
 
