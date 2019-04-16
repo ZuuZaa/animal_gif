@@ -19,7 +19,7 @@ function clickButton() {
         $("#gif-holder").empty()
         for (i = 0; i < 9; i++) {
             var gifimg = $("<img>")
-            gifimg.addClass("mx-auto p-2")
+            gifimg.addClass("mw-100 p-2")
             gifimg.attr("data-move", response.data[i].images.fixed_height.url)
             gifimg.attr("data-still", response.data[i].images.fixed_height_still.url)
             gifimg.attr("data-condition", "still")
