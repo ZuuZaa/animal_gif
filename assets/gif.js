@@ -31,7 +31,17 @@ function clickButton() {
 }
 
 function clickImage() {
-    alert ("clicked")
+    var move = $(this).attr("data-move") 
+    var still = $(this).attr("data-still")
+    var condition = $(this).attr("data-condition")
+     
+    if (condition == "still"){
+        $(this).attr("src", move)
+        $(this).attr("data-condition", "move")
+    }else if (condition == "move") {
+        $(this).attr("src", still)
+        $(this).attr("data-condition", "still")
+    }
 }
 
 $(".my-btn").on("click", clickButton)
